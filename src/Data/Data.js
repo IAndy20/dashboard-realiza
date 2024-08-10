@@ -44,7 +44,7 @@ export const SidebarData = [
 // Analytics Cards Data
 export const cardsData = [
   {
-    title: "Sales",
+    title: "Alcance 1",
     color: {
       backGround: "#688D2D",
       boxShadow: "0px 10px 20px 0px #DDEAF3",
@@ -54,13 +54,13 @@ export const cardsData = [
     png: UilUsdSquare,
     series: [
       {
-        name: "Sales",
+        name: "Alcance 1",
         data: [31, 40, 28, 51, 42, 109, 100],
       },
     ],
   },
   {
-    title: "Revenue",
+    title: "Alcance 2",
     color: {
       backGround: "#2F74BA",
       boxShadow: "0px 10px 20px 0px #2F74BA",
@@ -70,13 +70,13 @@ export const cardsData = [
     png: UilMoneyWithdrawal,
     series: [
       {
-        name: "Revenue",
+        name: "Alcance 2",
         data: [10, 100, 50, 70, 80, 30, 40],
       },
     ],
   },
   {
-    title: "Expenses",
+    title: "Alcance 3",
     color: {
       backGround:
         "#F2994A",
@@ -87,7 +87,7 @@ export const cardsData = [
     png: UilClipboardAlt,
     series: [
       {
-        name: "Expenses",
+        name: "Alcance 3",
         data: [10, 25, 15, 30, 12, 15, 20],
       },
     ],
