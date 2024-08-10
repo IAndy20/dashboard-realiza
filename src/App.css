@@ -1,0 +1,67 @@
+:root {
+  /* Colores principales */
+  --light-blue: #DDEAF3; /* Color prioritario */
+  --green: #688D2D; /* Detalles */
+  --dark-blue: #2F74BA; /* Detalles */
+
+  /* Colores adicionales */
+  --black: #000000; /* Negro para texto u otros elementos */
+  --white: #FFFFFF; /* Blanco para fondos o contrastes */
+  --warm-color: #F2994A; /* Color cálido para acentos */
+  
+  /* Otros estilos */
+  --glass: rgba(255, 255, 255, 0.54); /* Efecto de vidrio, opcional */
+  --boxShadow: 0px 19px 60px rgba(0, 0, 0, 0.08);
+  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+  --activeItem: rgba(242, 153, 74, 0.5); /* Acento cálido semitransparente */
+}
+
+.App {
+  color: var(--black);
+  background: var(--light-blue); /* Priorizar el celeste claro */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.AppGlass {
+  display: grid;
+  height: 97%;
+  width: 97%;
+  background: var(--white); /* Fondo blanco para contraste */
+  border-radius: 2rem;
+  gap: 16px;
+  grid-template-columns: 14rem auto 15rem; /* Tres columnas por defecto */
+  box-shadow: var(--boxShadow); /* Aplicar sombra */
+  overflow: hidden;
+}
+
+/* Cuando el Sidebar está oculto */
+.AppGlass.hide-sidebar {
+  grid-template-columns: 1fr auto; /* Eliminar la primera columna */
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+  .AppGlass {
+    grid-template-columns: 10% 50% auto;
+    overflow-y: scroll;
+  }
+
+  .AppGlass.hide-sidebar {
+    grid-template-columns: 1fr auto; /* Mantener proporcionalidad */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .AppGlass {
+    grid-template-columns: 1fr;
+  }
+
+  /* En móvil, ocultar la primera columna no requiere cambios */
+  .AppGlass.hide-sidebar {
+    grid-template-columns: 1fr;
+  }
+}
